@@ -19,4 +19,6 @@ class MoviesViewModel : ViewModel() {
     }
 
     // rest of logic
+
+
 }

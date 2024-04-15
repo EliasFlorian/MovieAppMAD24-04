@@ -9,12 +9,14 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
 import com.example.movieappmad24.models.getMovies
 import com.example.movieappmad24.viewmodels.MoviesViewModel
 import com.example.movieappmad24.widgets.HorizontalScrollableImageView
 import com.example.movieappmad24.widgets.MovieRow
 import com.example.movieappmad24.widgets.SimpleTopAppBar
+import com.example.movieappmad24.widgets.Player
 
 @Composable
 fun DetailScreen(
@@ -40,7 +42,10 @@ fun DetailScreen(
         ){ innerPadding ->
             Column {
                 MovieRow(modifier = Modifier.padding(innerPadding), movie = movie)
+                Player()
                 HorizontalScrollableImageView(movie = movie)
+
+
             }
         }
     }
